@@ -55,7 +55,58 @@
                 quaerat nemo nam, consequuntur nisi alias in praesentium. Fuga amet esse nam doloremque ut nemo nostrum.
             </p>
         </section>
-        <?php //@todo Add a contact form  ?>
+        <section class="container">
+            <h2 id="articles">Get in touch</h2>
+            <div class="form-errors">
+            <?php if(isset($errors)) {
+                include '_error.php';                
+             } ?>
+            </div>
+            <p>
+                Leave us a message and we will get back to you as soon as possible.
+            </p>
+            <p>
+                <span class="required">Fields marked with red wildcards * are required.</span>
+            </p>
+            <div class="form">
+            <form action="result.php" method="post">
+                <div class="field">
+                    <label for="name">Name <span class="asterix">*</span></label>
+                    <br>
+                    <input type="text" name="name" required />
+                </div>
+
+                <div class="field">
+                    <label for="email">Email <span class="asterix">*</span></label>
+                    <br>
+                    <input type="email" name="email" required />
+                </div>
+
+                <div class="field">
+                    <label for="subject">Subject <span class="asterix">*</span></label>
+                    <br>
+                    <select name="subject" id="subject" required>
+                        <option value=""></option>
+                        <option value="rdv">Prendre rendez-vous</option>
+                        <option value="newsletter">Inscription à la newsletter</option>
+                        <option value="reclamation">Réclamation</option>
+                        <option value="devis">Demander un devis</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message
+                    <br>
+                    <textarea name="message" rows=15></textarea>
+                    </label>
+                </div>
+
+                <div class="field">
+                    <button type="submit">send</button>
+                </div>
+            </form>
+            </div>
+        </section>
     </main>
     <?php include '_footer.php' ?>
 </body>

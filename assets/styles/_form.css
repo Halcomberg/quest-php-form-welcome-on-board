@@ -1,0 +1,72 @@
+/* .form {
+    display: flex;
+    justify-content: center;
+} */
+
+section form {
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
+label {
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 2rem;
+}
+
+.required {
+    font-size: .9rem;
+    /* text-align: left; */
+    /* max-width: 60ch; */
+    width: auto;
+    margin: auto;
+}
+
+span.asterix {
+    color: #cb381f;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+span.required {
+    font-size: .8rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    background-color: var(--grey);
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+input,
+select {
+    height: 2.5rem;
+}
+
+.field {
+    margin: 1rem 0 1rem 0;
+}
+
+.field button {
+    border: none;
+    padding: .5rem 1.75rem;
+    background-color: var(--primary-color);
+    color: var(--primary-color-inverse);
+    border-radius: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form-errors {
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
+.form-errors h3 {
+    color: var(--primary-color);
+}
